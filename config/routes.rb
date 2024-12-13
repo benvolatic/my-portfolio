@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # Root route for the app
+  root 'application#fallback_index_html'
+
   namespace :admin, module: 'admin_namespace' do
     resources :photos, only: [:index, :create, :show, :destroy]
     resources :projects, only: [:index, :create, :show]
