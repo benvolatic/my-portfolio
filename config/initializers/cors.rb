@@ -1,26 +1,11 @@
-# Be sure to restart your server when you modify this file.
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:3000' # Frontend URL
+    # Allow requests from your frontend in production
+    origins 'https://benjamin-react-rails-portfolio.herokuapp.com', 'http://localhost:3000'
 
     resource '*',
-      headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head],
-      credentials: true # Allow credentials (cookies and sessions)
+             headers: :any,
+             methods: %i[get post put patch delete options head],
+             credentials: false # Set credentials to false for wildcard or specify allowed origins
   end
 end
-
-# Avoid CORS issues when API is called from the frontend app.
-# Handle Cross-Origin Resource Sharing (CORS) in order to accept cross-origin Ajax requests.
-
-# Read more: https://github.com/cyu/rack-cors
-
-# Rails.application.config.middleware.insert_before 0, Rack::Cors do
-#   allow do
-#     origins "example.com"
-#
-#     resource "*",
-#       headers: :any,
-#       methods: [:get, :post, :put, :patch, :delete, :options, :head]
-#   end
-# end

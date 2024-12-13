@@ -20,17 +20,6 @@ module Backend
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
 
-    # Add middleware for cross-origin requests (CORS)
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins '*' # Update with specific origins in production
-        resource '*',
-                 headers: :any,
-                 methods: %i[get post put patch delete options head],
-                 credentials: true
-      end
-    end
-
     # Allow the Rails app to serve static files (for the React build)
     config.public_file_server.enabled = true
 
