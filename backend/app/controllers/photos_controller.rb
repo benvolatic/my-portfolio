@@ -1,4 +1,6 @@
 class PhotosController < ApplicationController
+    include Rails.application.routes.url_helpers # Needed for `url_for`
+
     def index
       photos = Photo.all
       render json: photos.map { |photo| photo_as_json(photo) }
@@ -24,7 +26,7 @@ class PhotosController < ApplicationController
       {
         id: photo.id,
         title: photo.title,
-        image_url: photo.image_url
+        image_url: photo.image.attached? ? url_for(photo.image) : nil
       }
     end
   end
