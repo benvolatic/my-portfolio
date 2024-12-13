@@ -20,7 +20,7 @@
   },
   "scripts": {
   "clean": "rm -rf ../backend/public/*",
-  "build": "npm run clean && react-scripts build && mv build ../backend/public",
+  "build": "npm run clean && react-scripts build && mv build ../public",
   "start": "react-scripts start",
   "test": "react-scripts test",
   "eject": "react-scripts eject"
