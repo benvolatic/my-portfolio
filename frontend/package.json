@@ -34,7 +34,7 @@
   },
   "scripts": {
     "clean": "rm -rf ../public/*",
-    "build": "npm run clean && react-scripts build && mv build ../public",
+  "build": "npm run clean && react-scripts build && cp -R build/* ../public",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
