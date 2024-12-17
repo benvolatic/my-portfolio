@@ -81,6 +81,8 @@ Rails.application.configure do
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   # config.hosts = [
+  config.hosts << "benjamin-react-rails-portfolio.herokuapp.com"
+config.hosts << "volatic.org"
   #   "example.com",     # Allow requests from example.com
   #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
   # ]
