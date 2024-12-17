@@ -40,7 +40,7 @@ export default function Home() {
       ></div>
 
       {/* Navbar */}
-      <Navbar />
+     
 
       {/* Main Content */}
       <div className="flex-grow">
