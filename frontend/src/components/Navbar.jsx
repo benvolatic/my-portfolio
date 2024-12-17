@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="p-4 bg-blue-600 text-white">
+    <nav className="p-4 bg-white text-blue-600">
       <ul className="flex justify-center gap-8">
         <li>
           <Link to="/" className="hover:underline">
