@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"; // Import Helmet
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Navbar from "../components/Navbar"; // Adjust the path as per your file structure
 import profilePic from "../assets/images/profilepic.jpg"; // Adjust the path as per your file structure
-import backgroundImg from "../assets/images/background2.jpeg"; // Adjust the path as per your file structure
+import backgroundImg from "../assets/images/background2.png"; // Adjust the path as per your file structure
 import { FaReact, FaNodeJs, FaDatabase, FaGitAlt } from "react-icons/fa";
 import hydrogen from "../assets/logos/hydrogen.png";
 import midjourney from "../assets/logos/midjourney.jpg";
