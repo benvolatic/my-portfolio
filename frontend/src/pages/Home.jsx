@@ -34,84 +34,85 @@ export default function Home() {
       </Helmet>
 
       {/* Fixed Background */}
-      <div
+      <div className="fixed top-0 left-0 w-full h-full bg-white z-[-1]"></div>
+      {/* <div
         className="fixed top-0 left-0 w-full h-full bg-cover bg-center z-[-1]"
         style={{ backgroundImage: `url(${backgroundImg})` }}
-      ></div>
+      ></div> */}
 
       {/* Navbar */}
      
 
       {/* Main Content */}
       <div className="flex-grow">
-        <Parallax pages={2} style={{ top: "0", left: "0" }}>
-          {/* Header Layer */}
-          <ParallaxLayer offset={0} speed={0.5}>
-            <div className="flex flex-col items-center justify-center h-screen text-center text-white">
-              <img
-                src={profilePic}
-                alt="Profile"
-                className="w-64 h-64 object-cover rounded-lg shadow-lg border-4 border-white"
-              />
-              <h1 className="text-5xl font-bold mt-6">Hi, I'm Ben Nelson</h1>
-              <p className="text-2xl mt-4">
-                Full Stack Developer | React Specialist | Problem Solver
-              </p>
-              <div className="mt-6 flex space-x-4">
-                <a
-                  href="#portfolio"
-                  className="px-6 py-3 bg-blue-500 rounded hover:bg-blue-700 transition text-white"
-                >
-                  View Portfolio
-                </a>
-                <a
-                  href="#contact"
-                  className="px-6 py-3 bg-gray-500 rounded hover:bg-gray-700 transition text-white"
-                >
-                  Contact Me
-                </a>
-              </div>
-            </div>
-          </ParallaxLayer>
+      <Parallax pages={1.2} style={{ top: "0", left: "0" }}>
+  {/* Header Layer */}
+  <ParallaxLayer offset={0} speed={0.5}>
+    <div className="flex flex-col items-center  h-screen text-center text-black mt-10">
+      <img
+        src={profilePic}
+        alt="Profile"
+        className="w-64 h-64 object-cover rounded-lg shadow-lg border-4 border-white"
+      />
+      <h1 className="text-5xl font-bold mt-6">Hi, I'm Ben Nelson</h1>
+      <p className="text-2xl mt-4">
+        Full Stack Developer | React Specialist | Problem Solver
+      </p>
+      <div className="mt-6 flex space-x-4">
+        <a
+          href="#portfolio"
+          className="px-6 py-3 bg-blue-500 rounded hover:bg-blue-700 transition text-white"
+        >
+          View Portfolio
+        </a>
+        <a
+          href="#contact"
+          className="px-6 py-3 bg-gray-500 rounded hover:bg-gray-700 transition text-white"
+        >
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </ParallaxLayer>
 
-          {/* Portfolio Section */}
-          <ParallaxLayer offset={1} speed={0.7}>
-            <div
-              id="portfolio"
-              className="min-h-screen flex flex-col items-center justify-center px-8 text-center text-white"
-            >
-              <h2 className="text-4xl font-bold mb-6">My Portfolio</h2>
-              <p className="text-lg max-w-2xl mb-8">
-                A showcase of my work, from modern front-end applications to
-                powerful back-end APIs. I build scalable and robust solutions.
-              </p>
-              <div className="flex flex-wrap justify-center space-x-4">
-                <a
-                  href="#project1"
-                  className="px-6 py-3 bg-green-500 rounded hover:bg-green-700 transition"
-                >
-                  Project 1
-                </a>
-                <a
-                  href="#project2"
-                  className="px-6 py-3 bg-purple-500 rounded hover:bg-purple-700 transition"
-                >
-                  Project 2
-                </a>
-                <a
-                  href="#project3"
-                  className="px-6 py-3 bg-red-500 rounded hover:bg-red-700 transition"
-                >
-                  Project 3
-                </a>
-              </div>
-            </div>
-          </ParallaxLayer>
-        </Parallax>
+  {/* Portfolio Section */}
+  <ParallaxLayer offset={0.8} speed={0.7}>
+    <div
+      id="portfolio"
+      className="flex flex-col items-center justify-center px-8 text-center"
+    >
+      <h2 className="text-4xl font-bold mb-6">My Portfolio</h2>
+      <p className="text-lg max-w-2xl mb-8">
+        A showcase of my work, from modern front-end applications to
+        powerful back-end APIs. I build scalable and robust solutions.
+      </p>
+      <div className="flex flex-wrap justify-center space-x-4">
+        <a
+          href="#project1"
+          className="px-6 py-3 bg-green-500 rounded hover:bg-green-700 transition"
+        >
+          Project 1
+        </a>
+        <a
+          href="#project2"
+          className="px-6 py-3 bg-purple-500 rounded hover:bg-purple-700 transition"
+        >
+          Project 2
+        </a>
+        <a
+          href="#project3"
+          className="px-6 py-3 bg-red-500 rounded hover:bg-red-700 transition"
+        >
+          Project 3
+        </a>
+      </div>
+    </div>
+  </ParallaxLayer>
+</Parallax>
       </div>
 
       {/* Footer */}
-      <footer className="bg-white text-gray-800 py-8 text-center">
+      <footer className="bg-white text-gray-800 py-8 text-center mb-2 relative z-10">
         <h3 className="text-xl font-semibold mb-4">Tools and Technologies</h3>
         <div className="flex justify-center flex-wrap mt-4 gap-6">
           <img src={hydrogen} alt="React" className="w-16 h-16 object-contain" />
