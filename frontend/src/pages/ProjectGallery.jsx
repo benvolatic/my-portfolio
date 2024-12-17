@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet"; // Import Helmet
 import { getProjects } from "../services/api";
 
 export default function ProjectGallery() {
@@ -16,11 +17,27 @@ export default function ProjectGallery() {
 
   return (
     <div className="p-8">
+      {/* Helmet for dynamic page title and metadata */}
+      <Helmet>
+        <title>Volatic - Project Gallery</title>
+        <meta
+          name="description"
+          content="Browse through a collection of projects, showcasing full-stack development, React, and more."
+        />
+      </Helmet>
+
       <h1 className="text-2xl font-bold mb-4">Project Gallery</h1>
       <div className="grid grid-cols-3 gap-4">
-        {currentProjects.map((projects) => (
-          <div key={project.id} className="border rounded overflow-hidden shadow-md">
-            <img src={project.image_url} alt={project.title} className="w-full h-40 object-cover" />
+        {currentProjects.map((project) => (
+          <div
+            key={project.id}
+            className="border rounded overflow-hidden shadow-md"
+          >
+            <img
+              src={project.image_url}
+              alt={project.title}
+              className="w-full h-40 object-cover"
+            />
             <div className="p-2 text-center">
               <h2 className="text-sm font-medium">{project.title}</h2>
             </div>
@@ -37,7 +54,11 @@ export default function ProjectGallery() {
         </button>
         <span>Page {page}</span>
         <button
-          onClick={() => setPage((prev) => (projects.length > prev * projectsPerPage ? prev + 1 : prev))}
+          onClick={() =>
+            setPage((prev) =>
+              projects.length > prev * projectsPerPage ? prev + 1 : prev
+            )
+          }
           disabled={projects.length <= page * projectsPerPage}
           className="px-4 py-2 bg-gray-300 rounded"
         >

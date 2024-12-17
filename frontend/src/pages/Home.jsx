@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet"; // Import Helmet
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Navbar from "../components/Navbar"; // Adjust the path as per your file structure
 import profilePic from "../assets/images/profilepic.jpg"; // Adjust the path as per your file structure
@@ -22,6 +23,16 @@ import v0 from "../assets/logos/v0.webp";
 export default function Home() {
   return (
     <div className="relative flex flex-col min-h-screen font-sans">
+      {/* Helmet for dynamic metadata */}
+      <Helmet>
+        <title>Volatic - Home</title>
+        <meta
+          name="description"
+          content="Welcome to Volatic! A showcase of Ben Nelson's portfolio, featuring front-end and back-end projects."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Helmet>
+
       {/* Fixed Background */}
       <div
         className="fixed top-0 left-0 w-full h-full bg-cover bg-center z-[-1]"
@@ -29,7 +40,7 @@ export default function Home() {
       ></div>
 
       {/* Navbar */}
-     
+      <Navbar />
 
       {/* Main Content */}
       <div className="flex-grow">
@@ -109,7 +120,7 @@ export default function Home() {
           <img src={node} alt="Git" className="w-16 h-16 object-contain" />
           <img src={one} alt="Git" className="w-16 h-16 object-contain" />
           <img src={postgresql} alt="Git" className="w-16 h-16 object-contain" />
-          <br/> 
+          <br />
           <img src={rails} alt="Git" className="w-16 h-16 object-contain" />
           <img src={reactnative} alt="Git" className="w-16 h-16 object-contain" />
           <img src={relume} alt="Git" className="w-16 h-16 object-contain" />
@@ -118,11 +129,9 @@ export default function Home() {
           <img src={tailwindcss} alt="Git" className="w-16 h-16 object-contain" />
           <img src={typescript} alt="Git" className="w-16 h-16 object-contain" />
           <img src={v0} alt="Git" className="w-16 h-16 object-contain" />
-
-          {/* Add more logos as needed */}
         </div>
         <p className="text-sm text-gray-400 mt-6">
-          &copy; {new Date().getFullYear()} [Your Name]. All rights reserved.
+          &copy; {new Date().getFullYear()} Ben Nelson. All rights reserved.
         </p>
       </footer>
     </div>

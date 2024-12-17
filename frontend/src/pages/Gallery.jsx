@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet"; // Import Helmet
 import { getPhotos } from "../services/api";
 
 export default function Gallery() {
   const [photos, setPhotos] = useState([]);
   const [page, setPage] = useState(1);
   const photosPerPage = 12;
-  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null); // Index of the selected photo
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null);
 
   useEffect(() => {
     getPhotos()
@@ -33,6 +34,15 @@ export default function Gallery() {
 
   return (
     <div className="p-0">
+      {/* Helmet for dynamic page title and metadata */}
+      <Helmet>
+        <title>Volatic - Photo Gallery</title>
+        <meta
+          name="description"
+          content="Explore a curated photo gallery featuring stunning visuals and photography."
+        />
+      </Helmet>
+
       <h1 className="sr-only">Photo Gallery</h1>
 
       {/* Grid Layout */}
@@ -46,7 +56,7 @@ export default function Gallery() {
             <img
               src={photo.image_url}
               alt=""
-              className="w-full h-64 object-cover" // Larger grid photos
+              className="w-full h-64 object-cover"
             />
           </div>
         ))}
@@ -56,15 +66,12 @@ export default function Gallery() {
       {currentPhotoIndex !== null && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-75 flex items-center justify-center">
           <div className="relative max-w-4xl w-full p-4">
-            {/* Close Button */}
             <button
               className="absolute top-2 right-2 text-white text-2xl font-bold"
               onClick={closeModal}
             >
               &times;
             </button>
-
-            {/* Image */}
             <div className="flex items-center justify-center">
               <img
                 src={photos[currentPhotoIndex]?.image_url}
@@ -72,8 +79,6 @@ export default function Gallery() {
                 className="max-w-full max-h-screen object-contain"
               />
             </div>
-
-            {/* Navigation Arrows */}
             <button
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl font-bold"
               onClick={showPreviousPhoto}
