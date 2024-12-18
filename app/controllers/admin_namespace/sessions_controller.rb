@@ -1,6 +1,11 @@
 module AdminNamespace
   class SessionsController < ApplicationController
     # POST /admin_namespace/login
+
+    def new
+      render :new  # Renders the login form view
+    end
+    
     def create
       admin = Admin.find_by(username: params[:username])
 
