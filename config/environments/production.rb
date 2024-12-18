@@ -77,12 +77,13 @@ Rails.application.configure do
 
   # Only use :id for inspections in production.
   config.active_record.attributes_for_inspect = [ :id ]
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || true
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   # config.hosts = [
   config.hosts << "benjamin-react-rails-portfolio.herokuapp.com"
-config.hosts << "volatic.org"
+  config.hosts << "volatic.org"
+  config.hosts << "www.volatic.org"
   #   "example.com",     # Allow requests from example.com
   #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
   # ]
