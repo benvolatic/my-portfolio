@@ -1,0 +1,15 @@
+{
+    "name": "root-config",
+    "version": "1.0.0",
+    "scripts": {
+        "heroku-postbuild": "cd frontend && npm install && npm run build"
+    },
+    "engines": {
+        "node": "20.x",
+        "npm": "10.x"
+    },
+    "dependencies": {
+        "react-helmet": "^6.1.0",
+        "react-icons": "^5.4.0"
+    }
+}

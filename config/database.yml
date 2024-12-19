@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch("POSTGRES_USER") %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
+  host: <%= ENV.fetch("POSTGRES_HOST", "localhost") %>
+  port: <%= ENV.fetch("POSTGRES_PORT", "5432") %>
+
+development:
+  <<: *default
+  database: my_portfolio_development
+
+test:
+  <<: *default
+  database: my_portfolio_test
+
+production:
+  <<: *default
+  database: my_portfolio_production
+  username: my_portfolio
+  password: <%= ENV['MY_PORTFOLIO_DATABASE_PASSWORD'] %>

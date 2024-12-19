@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.6738b7e0.css",
+    "main.js": "./static/js/main.d2fa4bcf.js",
+    "static/media/profilepic.jpg": "./static/media/profilepic.ba63074944bfb1490b78.jpg",
+    "static/media/background1.jpeg": "./static/media/background1.937f47e082bb7363c508.jpeg",
+    "static/media/tailwindcss.png": "./static/media/tailwindcss.973bc65cc9a876cdeb3f.png",
+    "static/media/midjourney.jpg": "./static/media/midjourney.7aece7adb044cd35e002.jpg",
+    "static/media/rails.jpg": "./static/media/rails.b71d5428e2302f031271.jpg",
+    "static/media/relume.png": "./static/media/relume.a599002cf6755dc07f84.png",
+    "static/media/postgresql.webp": "./static/media/postgresql.9164d05732e17ccba0a1.webp",
+    "static/media/hydrogen.png": "./static/media/hydrogen.d81ccc8b2f6a257fa08b.png",
+    "static/media/node.webp": "./static/media/node.1c0a35fb5f83ef71741d.webp",
+    "static/media/react-native-1.svg": "./static/media/react-native-1.55360266b3781dae00a5a77c8916f82d.svg",
+    "static/media/one.svg": "./static/media/one.c3584f2b6d79eff324698917fb466197.svg",
+    "static/media/v0.webp": "./static/media/v0.08f40ad4d1c13177df93.webp",
+    "index.html": "./index.html",
+    "main.6738b7e0.css.map": "./static/css/main.6738b7e0.css.map",
+    "main.d2fa4bcf.js.map": "./static/js/main.d2fa4bcf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6738b7e0.css",
+    "static/js/main.d2fa4bcf.js"
+  ]
+}
