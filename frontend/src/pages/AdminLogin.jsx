@@ -10,7 +10,7 @@ export default function AdminLogin() {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        "${API_BASE_URL}/admin/login",
+        `${process.env.REACT_APP_API_URL}/admin/login`,
         { username, password },
         { withCredentials: true } // Ensures cookies are sent
       );

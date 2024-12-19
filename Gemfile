@@ -3,7 +3,7 @@ ruby '3.3.5'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.0"
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 2.1"
+# gem "sqlite3", ">= 2.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -11,6 +11,8 @@ gem "puma", ">= 5.0"
 gem 'active_storage_validations'
 
 gem 'pg', '~> 1.1'
+
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'rack-cors' # For Cross-Origin Resource Sharing
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
